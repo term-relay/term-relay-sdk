@@ -240,6 +240,10 @@ class RelayProcess:
         )
 
 
+@unittest.skipUnless(
+    SCRIPT_PATH.exists(),
+    "python-iterm2 extension is not present in this repository",
+)
 class Iterm2RelayProcessTests(unittest.TestCase):
     def test_virtual_pane_roundtrip_without_hub(self):
         with tempfile.TemporaryDirectory() as tmp:
