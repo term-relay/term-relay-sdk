@@ -1,0 +1,28 @@
+{
+  "id": "com.termrelay.simpleio.spawn",
+  "name": "Term Relay Simple IO Spawn Extension",
+  "version": "0.1.0",
+  "protocol_version": "v1",
+  "adapter": {
+    "type": "simple-io-v1"
+  },
+  "entry": {
+    "command": "go",
+    "args": [
+      "run",
+      "./cmd/term-relay-ext-simpleio-spawn/..."
+    ],
+    "workdir": "../.."
+  },
+  "capabilities": {
+    "can_spawn": true,
+    "can_attach": false,
+    "can_takeover": false,
+    "can_list_targets": false,
+    "has_history_snapshot": false,
+    "has_native_layout_events": false,
+    "supports_shared_input": true,
+    "supports_controller_resize": true,
+    "supports_restore_on_stop": true
+  }
+}

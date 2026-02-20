@@ -1,0 +1,25 @@
+{
+  "id": "com.termrelay.tmux",
+  "name": "Term Relay Tmux Extension",
+  "version": "0.1.0",
+  "protocol_version": "v1",
+  "entry": {
+    "command": "go",
+    "args": [
+      "run",
+      "./cmd/term-relay-ext-tmux/..."
+    ],
+    "workdir": "../.."
+  },
+  "capabilities": {
+    "can_spawn": false,
+    "can_attach": true,
+    "can_takeover": false,
+    "can_list_targets": false,
+    "has_history_snapshot": true,
+    "has_native_layout_events": true,
+    "supports_shared_input": true,
+    "supports_controller_resize": true,
+    "supports_restore_on_stop": true
+  }
+}

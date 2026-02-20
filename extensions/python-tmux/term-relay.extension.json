@@ -1,0 +1,27 @@
+{
+  "id": "com.termrelay.python.tmux",
+  "name": "Term Relay Python Tmux Extension",
+  "version": "0.1.0",
+  "protocol_version": "v1",
+  "adapter": {
+    "type": "rpc-v1"
+  },
+  "entry": {
+    "command": "python3",
+    "args": [
+      "./main.py"
+    ],
+    "workdir": "."
+  },
+  "capabilities": {
+    "can_spawn": true,
+    "can_attach": true,
+    "can_takeover": false,
+    "can_list_targets": false,
+    "has_history_snapshot": true,
+    "has_native_layout_events": true,
+    "supports_shared_input": true,
+    "supports_controller_resize": true,
+    "supports_restore_on_stop": true
+  }
+}
