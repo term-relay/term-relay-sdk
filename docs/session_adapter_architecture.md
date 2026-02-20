@@ -13,10 +13,10 @@ It consolidates current practice and future direction for:
 Current design assets are strong but split across:
 - `docs/control_protocol.md` (protocol contract)
 - `docs/control_protocol_tmux_adapter.md` (tmux translation)
-- `term-relay-cli/docs/tmux_integration.md` (tmux behavior and validation)
-- `term-relay-iterm2/docs/iterm2_plugin_and_extension_sdk.md` (iTerm2 plugin + bridge design)
-- `term-relay-cli/e2e_cli_tmux_web_test.go` (tmux+web interop coverage)
-- `term-relay-iterm2/iterm2-plugin/*` (prototype implementation path)
+- `https://github.com/term-relay/term-relay-cli/blob/main/docs/tmux_integration.md` (tmux behavior and validation)
+- `https://github.com/term-relay/term-relay-iterm2/blob/main/docs/iterm2_plugin_and_extension_sdk.md` (iTerm2 plugin + bridge design)
+- `https://github.com/term-relay/term-relay-cli/blob/main/e2e_cli_tmux_web_test.go` (tmux+web interop coverage)
+- `https://github.com/term-relay/term-relay-iterm2/tree/main/iterm2-plugin` (prototype implementation path)
 
 What is missing is one top-level architecture for all session source types.
 
