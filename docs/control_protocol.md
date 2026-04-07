@@ -2,6 +2,10 @@
 
 This document defines the canonical size-control protocol for Term Relay.
 
+The machine-readable fixture for the current Hub session relay contract lives at:
+
+- `contracts/hub_session_protocol_v1.json`
+
 The protocol is backend-agnostic. tmux, iTerm2 pane takeover, shell plugins, or
 future injectors should map their native signals into this protocol via adapters.
 

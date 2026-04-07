@@ -1,0 +1,47 @@
+{
+  "name": "hub_session_protocol_v1",
+  "version": 1,
+  "description": "Canonical hub session relay message groups and invariants for Term Relay.",
+  "message_groups": {
+    "cli_to_hub": [
+      "create_session",
+      "output",
+      "heartbeat",
+      "resync_output"
+    ],
+    "hub_to_cli": [
+      "input",
+      "resize",
+      "resync_request",
+      "control"
+    ],
+    "client_to_hub": [
+      "devices_request",
+      "sessions_request",
+      "notifications_request",
+      "subscribe",
+      "input",
+      "resize",
+      "resync_request",
+      "control_request",
+      "control_release"
+    ],
+    "hub_to_client": [
+      "subscribed",
+      "output",
+      "cli_status",
+      "control",
+      "devices_snapshot",
+      "sessions_snapshot",
+      "notifications_snapshot",
+      "error"
+    ]
+  },
+  "invariants": [
+    "input remains shared regardless of controller",
+    "resize is controller-gated",
+    "new sessions default controller_id to local",
+    "resync_output targets exactly one subscriber",
+    "snapshot messages are side-band state sync, not terminal output"
+  ]
+}

@@ -6,6 +6,7 @@ Open-source SDK and extension examples for Term Relay.
 
 - Python SDK: `extensions/python_sdk`
 - Example extensions (spawn/tmux/simple-io): `extensions/*`
+- Machine-readable protocol fixtures: `contracts/*`
 - Protocol and adapter docs:
   - `docs/control_protocol.md`
   - `docs/control_protocol_tmux_adapter.md`
