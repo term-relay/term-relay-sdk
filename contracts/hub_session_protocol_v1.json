@@ -5,6 +5,7 @@
   "message_groups": {
     "cli_to_hub": [
       "create_session",
+      "session_update",
       "output",
       "heartbeat",
       "resync_output"
