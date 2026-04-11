@@ -275,14 +275,14 @@ class SingleSessionRPCServer:
     def _start(self, params: Dict[str, Any]) -> Dict[str, Any]:
         with self._lock:
             if self._session is not None:
-                raise RPCError(4001, "session already running")
+                raise RPCError(4001, "terminal already running")
 
         runtime = self._start_session(params, self._emit_output, self._emit_exit)
 
         with self._lock:
             if self._session is not None:
                 runtime.stop()
-                raise RPCError(4001, "session already running")
+                raise RPCError(4001, "terminal already running")
             self._session = runtime
 
         return {
@@ -323,9 +323,9 @@ class SingleSessionRPCServer:
         with self._lock:
             runtime = self._session
             if runtime is None:
-                raise RPCError(4004, "session not found")
+                raise RPCError(4004, "terminal not found")
             if handle and handle != runtime.handle:
-                raise RPCError(4004, "session not found")
+                raise RPCError(4004, "terminal not found")
             return runtime
 
     def _emit_output(self, handle: str, data: bytes) -> None:

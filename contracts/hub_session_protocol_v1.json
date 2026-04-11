@@ -41,7 +41,7 @@
   "invariants": [
     "input remains shared regardless of controller",
     "resize is controller-gated",
-    "new sessions default controller_id to local",
+    "new terminals default controller_id to local",
     "resync_output targets exactly one subscriber",
     "snapshot messages are side-band state sync, not terminal output"
   ]

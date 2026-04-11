@@ -18,7 +18,7 @@ Current design assets are strong but split across:
 - `https://github.com/term-relay/term-relay-cli/blob/main/e2e_cli_tmux_web_test.go` (tmux+web interop coverage)
 - `https://github.com/term-relay/term-relay-iterm2/tree/main/iterm2-plugin` (prototype implementation path)
 
-What is missing is one top-level architecture for all session source types.
+What is missing is one top-level architecture for all terminal source types.
 
 ## Design Goals
 
@@ -36,8 +36,8 @@ What is missing is one top-level architecture for all session source types.
 
 ## Terminology
 
-- Session source: the runtime process or terminal surface being shared.
-- Adapter: translation layer between a backend-native session source and Term Relay protocol.
+- Terminal source: the runtime process or terminal surface being shared.
+- Adapter: translation layer between a backend-native terminal source and Term Relay protocol.
 - Runner: the relay process that connects to Hub and streams I/O.
 - Controller: size authority (`local` or subscriber id); input remains shared.
 
@@ -71,7 +71,7 @@ Every integration backend should implement the same conceptual adapter contract.
   - id
   - source type (`spawn`, `attach`, `takeover`)
   - dimensions (if known)
-  - command/title/session metadata
+  - command/title/terminal metadata
 
 ### 2) Session Binding
 

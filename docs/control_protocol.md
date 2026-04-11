@@ -2,7 +2,7 @@
 
 This document defines the canonical size-control protocol for Term Relay.
 
-The machine-readable fixture for the current Hub session relay contract lives at:
+The machine-readable fixture for the current Hub terminal relay contract lives at:
 
 - `contracts/hub_session_protocol_v1.json`
 
@@ -23,7 +23,7 @@ future injectors should map their native signals into this protocol via adapters
 ## Entities
 
 - Hub: authority for `controller_id` state.
-- Session runner (CLI backend adapter): applies size according to controller.
+- Terminal runner (CLI backend adapter): applies size according to controller.
 - Subscriber (Web client): may request/release control and send resize.
 - Local controller id: literal `local`.
 

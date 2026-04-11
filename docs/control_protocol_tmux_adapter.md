@@ -17,7 +17,7 @@ signals into protocol-level control actions.
 - `%output pane-id value`
   - Pane produced output.
 - `%session-changed ...`, `%exit`, etc.
-  - Session lifecycle notifications.
+  - Terminal lifecycle notifications.
 
 ## Mapping: tmux -> Control Protocol
 
